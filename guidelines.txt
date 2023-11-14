@@ -1,0 +1,5 @@
+Following are resources to best-practices helpful for Scalable Development
+
+1. Develop applications following the 12-factor principles --> https://12factor.net/
+2. Robust Secrets Management
+    https://blog.gitguardian.com/how-to-handle-secrets-in-python/
