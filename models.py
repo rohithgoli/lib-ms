@@ -1,4 +1,4 @@
-from typing import Annotated
+from typing import Annotated, List
 from pydantic import BaseModel, Field, EmailStr, BeforeValidator
 
 PyObjectId = Annotated[str, BeforeValidator(str)]
@@ -11,3 +11,12 @@ class UserModel(BaseModel):
     id: PyObjectId | None = Field(alias="_id", default=None)
     name: str
     email: EmailStr
+
+
+class UserCollection(BaseModel):
+    users: List[UserModel]
+
+
+class UpdateUserModel(BaseModel):
+    name: str | None = None
+    email: EmailStr | None = None
